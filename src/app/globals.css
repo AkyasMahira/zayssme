@@ -1,26 +1,33 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@plugin "@tailwindcss/typography";
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F2F2F4;
+  --foreground: #2E2E2E;
+  --coffee: #8C6053;
+  --osaragi: #686C6F;
+  --suram: #E6E8ED;
+  --shadow: 4px 4px 0px 0px var(--foreground);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-coffee: var(--coffee);
+  --color-osaragi: var(--osaragi);
+  --color-suram: var(--suram);
+  --font-roboto: var(--font-roboto-mono);
+  --font-geist: var(--font-geist-mono);
+  --shadow-shadow: var(--shadow);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  @apply leading-relaxed
 }
