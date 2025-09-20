@@ -1,9 +1,30 @@
-export default function NotFound() {
+import Image from "next/image";
+import Link from "next/link";
+
+const NotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-4xl font-bold">404</h1>
-      <p className="text-gray-600 mt-2">Oops! Page not found</p>
-      <p className="text-gray-600">The page you are looking for does not exist.</p>
+    <div className="mt-12 space-y-8 flex flex-col items-center justify-center text-center">
+      <div className="relative">
+        <Image
+          src="/osaragi.png"
+          alt="osaragi makan bakpao"
+          className="object-contain"
+          width={260}
+          height={260}
+        />
+      </div>
+      <h1 className="text-3xl sm:text-4xl font-medium">404 - Page Not Found</h1>
+      <p className="font-medium text-zeta text-lg">
+        Oops! The page you are looking for does not exist.
+      </p>
+      <Link
+        href="/"
+        className="text-zeta font-medium hover:underline decoration-2"
+      >
+        Go back to home
+      </Link>
     </div>
   );
-}
+};
+
+export default NotFound;

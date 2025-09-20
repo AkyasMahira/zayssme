@@ -5,7 +5,7 @@ import { Divider } from "@/components/ui/divider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Irtideath - Projects",
+  title: "My - Projects",
   description: "A collection of projects I've worked on.",
 };
 

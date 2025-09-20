@@ -2,8 +2,8 @@ import { TchatLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, Ts
 
 export const navigationItems: TnavigationItem[] = [
     { name: "home", href: "/" },
-    { name: "projects", href: "/projects" },
-    { name: "writings", href: "/writings" },
+    { name: "projects", href: "/project" },
+    { name: "achievements", href: "/achievement" },
 ];
 
 export const skillBadgeIcon: TskillBadgeIcon[] = [
@@ -47,6 +47,32 @@ export const skillBadgeIcon: TskillBadgeIcon[] = [
         icon: "simple-icons:figma",
         link: "https://www.figma.com"
     },
+];
+
+export type TAchievement = {
+  title: string;
+  issuer: string;
+  date: string;
+  image: string;
+  link?: string;
+  technologies?: TskillBadgeIcon[];
+};
+
+export const achievements: TAchievement[] = [
+  {
+    title: "Finalis Fitcom 2.0",
+    issuer: "Universitas Dinamika",
+    date: "2024",
+    image: "/certificates/fitcom.jpg",
+    link: "#",
+  },
+  {
+    title: "Peserta Trilogy code SIdinus",
+    issuer: "SI - Udinus",
+    date: "2025",
+    image: "/certificates/SIUdinus.jpg",
+    link: "#",
+  },
 ];
 
 export const internships: Tinternship[] = [

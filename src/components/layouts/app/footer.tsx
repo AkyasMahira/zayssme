@@ -14,10 +14,10 @@ const Footer = () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="https://github.com/IRTIDEATH"
+                href="https://github.com/AkyasMahira"
                 rel="noopener noreferrer"
                 target="_blank"
-                aria-label="IRTIDEATH github pages"
+                aria-label="AkyasMahira github pages"
                 className="text-suram bg-foreground h-12 w-12 flex items-center justify-center border border-foreground hover:text-foreground hover:bg-suram transition-colors duration-400"
               >
                 <svg
@@ -43,7 +43,7 @@ const Footer = () => {
         </TooltipProvider>
       </div>
       <div className="text-sm text-foreground px-4 font-medium">
-        © 2025 - Irtideath
+        © 2025 - Zayssme
       </div>
     </footer>
   );

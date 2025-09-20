@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="w-full h-24 text-foreground flex items-center justify-between">
       <div className="relative">
-        <span className="font-medium text-[16px]">Irtideath</span>
+        <span className="font-medium text-[16px]">Zayssme</span>
         {!prefersReducedMotion && <SparkleGroup />}
       </div>
       <div className="hidden md:flex items-center">

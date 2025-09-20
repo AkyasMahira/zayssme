@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Irtideath",
-  description: "Portfolio website of Al Sakha, npc developer",
+  title: "Zayssme",
+  description: "Portfolio website of Akyas Mahira",
   keywords: [
     "software engineer",
     "web developer",
@@ -26,24 +26,24 @@ export const metadata: Metadata = {
     "personal projects",
     "portfolio",
     "portfolio website",
-    "irtideath portfolio",
-    "al sakha portfolio",
-    "irtideath portfolio website",
-    "al sakha portfolio website",
+    "akyas mahira portfolio",
+    "zayssme portfolio",
+    "zayssme portfolio website",
+    "akyas mahira portfolio website",
     "npc",
-    "al sakha",
-    "irtideath",
-    "vestia zeta",
+    "akyas mahira",
+    "zayssme",
+    "osaragi",
     "cat",
   ],
   authors: [
     {
-      name: "IRTIDEATH",
-      url: "https://github.com/IRTIDEATH",
+      name: "Doombundel",
+      url: "https://github.com/AkyasMAhira",
     },
   ],
   icons: {
-    icon: "/irtilogo.svg",
+    icon: "/untitled.svg",
   },
 };
 
