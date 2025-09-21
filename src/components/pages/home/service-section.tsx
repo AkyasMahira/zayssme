@@ -5,19 +5,19 @@ const ServiceSection = () => {
     <section className="w-full mx-auto">
       <h1 className="text-2xl mb-6 font-medium">service</h1>
       <p className="w-full text-zeta font-medium text-[16px] text-start">
-        i provide services that reflect my current capabilities, with a focus on
-        delivering effective and thoughtful solutions.
+        I provide services that reflect my current capabilities, with a focus on
+        delivering effective and thoughtful solutions. I believe that quality code
+        requires consistency in indentation, meaningful variable naming, proper
+        commenting, and logical project structure.
       </p>
       <div className="mt-8 flex flex-col gap-12">
         <div className="relative flex flex-row-reverse items-start justify-between gap-4">
           <DividerVertical />
           <article className="space-y-2">
-            <h2 className="text-lg font-medium">Frontend</h2>
+            <h2 className="text-lg font-medium">Frontend Development</h2>
             <p className="text-zeta text-[15px]">
-              transforming designs into functional and responsive user
-              interfaces. i create web experiences that are interactive, fast to
-              load, seo friendly and optimized across multiple devices, from
-              desktop to mobile.
+              Transforming designs into responsive, interactive web experiences 
+              that are fast, SEO-optimized, and work seamlessly across all devices.
             </p>
           </article>
           <div className="z-10 bg-background">
@@ -45,15 +45,12 @@ const ServiceSection = () => {
             </svg>
           </div>
         </div>
-
         <div className="flex flex-row-reverse items-start justify-between gap-4">
           <article className="space-y-2">
             <h2 className="text-lg font-medium">Backend</h2>
             <p className="text-zeta text-[15px]">
-              i built a secure API that allows seamless integration, scalability
-              across the system. with a focus on efficiency and reliability,
-              ensuring clean and well-structured code, making future development
-              easy.
+              Developing secure, scalable APIs with clean, maintainable code 
+              that ensures system reliability and easy future enhancements.
             </p>
           </article>
           <div className="z-10 bg-background">

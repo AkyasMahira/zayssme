@@ -2,8 +2,8 @@ import { TchatLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, Ts
 
 export const navigationItems: TnavigationItem[] = [
     { name: "home", href: "/" },
-    { name: "projects", href: "/project" },
-    { name: "achievements", href: "/achievement" },
+    { name: "projects", href: "/p" },
+    { name: "achievements", href: "/a" },
 ];
 
 export const skillBadgeIcon: TskillBadgeIcon[] = [
@@ -77,9 +77,9 @@ export const achievements: TAchievement[] = [
 
 export const internships: Tinternship[] = [
     {
-        company: "INDI Technology",
-        position: "Fullstack Developer",
-        date: "Sep - Nov 2024",
+        company: "RSUD Simpang Lima Gumul",
+        position: "Fullstack Website Developer",
+        date: "Jul - Dec 2025",
         technologies: [
             {
                 name: "Javascript",
@@ -98,27 +98,7 @@ export const internships: Tinternship[] = [
                 icon: "simple-icons:tailwindcss"
             },
         ],
-        link: "https://www.linkedin.com/company/inditechno/",
-    },
-    {
-        company: "GAMECOMM",
-        position: "Frontend Developer",
-        date: "Jan - Mar 2025",
-        technologies: [
-            {
-                name: "Typescript",
-                icon: "simple-icons:typescript"
-            },
-            {
-                name: "Vue.js",
-                icon: "simple-icons:vuedotjs"
-            },
-            {
-                name: "Tailwind CSS",
-                icon: "simple-icons:tailwindcss"
-            },
-        ],
-        link: "https://www.linkedin.com/company/gamecomm/",
+        link: "https://www.linkedin.com/company/RSUD-Simpang-Lima-Gumul/",
     },
 ];
 
@@ -311,16 +291,16 @@ export const techcollections: TskillBadgeIcon[] = [
         icon: "simple-icons:shadcnui"
     },
     {
-        name: "Tanstack Query",
-        icon: "simple-icons:reactquery"
+        name: "Laravel",
+        icon: "simple-icons:laravel"
     },
     {
-        name: "PostgreSQL",
-        icon: "simple-icons:postgresql"
+        name: "PHP",
+        icon: "simple-icons:php"
     },
     {
-        name: "PrismaORM",
-        icon: "simple-icons:prisma"
+        name: "React.js",
+        icon: "simple-icons:react"
     },
 ]
 
@@ -328,25 +308,25 @@ export const chatLink: TchatLink[] = [
     {
         label: "Talk with me on Discord",
         icon: "simple-icons:discord",
-        href: "https://discord.com/users/yasudahlah",
+        href: "https://discord.com/users/zayssme",
         title: "Discord",
     },
     {
         label: "Talk with me on Threads",
         icon: "simple-icons:threads",
-        href: "https://www.threads.com/@enderjhass",
+        href: "https://www.threads.com/@zayssme",
         title: "Threads",
     },
     {
         label: "Talk with me on Linkedin",
         icon: "ion:social-linkedin",
-        href: "https://www.linkedin.com/in/al-sakha",
+        href: "https://www.linkedin.com/in/muhammad-akyas-24a228241/",
         title: "Linkedin",
     },
     {
         label: "Talk with me on Email",
         icon: "lucide:mail",
-        href: "mailto:alsakhafatthariq@gmail.com",
+        href: "mailto:akyasmahira.business@gmail.com",
         title: "Email",
     }
 ]

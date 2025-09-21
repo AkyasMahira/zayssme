@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 const HeroSection = () => {
-  const bannerImagePath = "/banner.jpeg"; 
+  const bannerImagePath = "/giphy.gif"; 
 
   return (
     <section className="relative flex items-start sm:items-center justify-between px-6 py-8 h-40 overflow-hidden">
       <div className="absolute inset-0">
         <Image 
           src={bannerImagePath} 
-          alt="Banner" 
+          alt="Animated Banner" 
           fill 
           priority
           unoptimized={true} 

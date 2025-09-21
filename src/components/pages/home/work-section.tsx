@@ -1,6 +1,6 @@
 import { internships } from "@/constants";
 import Link from "next/link";
-import CoffeeText from "@/components/ui/coffee-text";
+import MatchaText from "@/components/ui/matcha-text";
 
 const WorkExperienceSection = () => {
   return (
@@ -9,7 +9,7 @@ const WorkExperienceSection = () => {
       <p className="w-full mb-8 text-zeta font-medium text-[16px] text-start">
         professional work experience that has contributed to the development of
         my skills and career, able to work on projects{" "}
-        <CoffeeText>independently</CoffeeText> or collaboratively in a team.
+        <MatchaText>independently</MatchaText> or collaboratively in a team.
       </p>
       <div className="flex flex-col gap-6">
         {internships.map((item, index) => (

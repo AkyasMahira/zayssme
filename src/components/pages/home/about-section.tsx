@@ -11,11 +11,10 @@ const AboutSection = () => {
         in front of a screen, whether it&apos;s &apos;seriously coding&apos; or
         just playing Roblox, lol. 
         </p>
-      {/* <p className="w-full text-zeta font-medium text-[16px] text-start">
-        i&apos;m also learning editing, graphic design, and writing. loving cold
-        or hot <MatchaText>matcha</MatchaText> while working and study. anyway,
-        that&apos;s all about me and thank you.
-      </p> */}
+      <p className="w-full text-zeta font-medium text-[16px] text-start">
+        I am also a photo editor, usually I edit the color grading on photos
+        and then add text or what could be called <MatchaText>typography</MatchaText>.Thank you for taking the time to stop by.
+      </p>
     </section>
   );
 };
