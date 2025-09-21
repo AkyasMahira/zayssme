@@ -6,8 +6,8 @@ const NotFound = () => {
     <div className="mt-12 space-y-8 flex flex-col items-center justify-center text-center">
       <div className="relative">
         <Image
-          src="/osaragi.png"
-          alt="osaragi makan bakpao"
+          src="/osrgi.png"
+          alt="osaragi bab"
           className="object-contain"
           width={260}
           height={260}

@@ -1,56 +1,89 @@
 "use client";
 
-import { AnimatedBackground } from "@/components/animated-background";
-import { skillBadgeIcon } from "@/constants";
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
+import { techcollections } from "@/constants/index";
 
 const SkillSection = () => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const positionRef = useRef(0);
+
+  // Data untuk tech stack dari constants
+  const techStack = techcollections.map(item => ({
+    name: item.name,
+    icon: item.icon,
+    link: "#"
+  }));
+
+  // Duplikasi data untuk efek infinite
+  const duplicatedTechStack = [...techStack, ...techStack];
+
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+
+    const speed = 1; // Pixels per frame
+
+    const animate = () => {
+      if (!isPaused) {
+        positionRef.current -= speed;
+        
+        // Reset position ketika mencapai setengah width
+        const scrollWidth = scroller.scrollWidth / 2;
+        if (Math.abs(positionRef.current) >= scrollWidth) {
+          positionRef.current = 0;
+        }
+        
+        scroller.style.transform = `translateX(${positionRef.current}px)`;
+      }
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isPaused]);
+
   return (
-    <section className="w-full mx-auto divide-y-2 divide-suram mb-4 sm:mb-0">
-      <AnimatedBackground
-        className='-z-50 bg-suram'
-        transition={{
-          bounce: 0,
-          type: "spring",
-          duration: 0.3,
-          from: 50
-        }}
-        enableHover
-      >
-        {skillBadgeIcon.map((item, index) => (
-            <Link
-              aria-label="Skills Link"
-              key={index}
-              data-id={`card-${index}`}
-              href={`${item.link}`}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="block"
-            >
-              <div className="group flex items-center justify-between px-6 py-6 cursor-pointer">
-                <div className="flex items-center gap-8">
-                  <Icon
-                  className="text-3xl font-medium text-zeta transition-colors duration-300 group-hover:text-foreground tracking-tight"
-                    icon={item.icon}
-                    aria-hidden="true"
-                  />
-
-                <span className="font-medium text-lg text-zeta transition-colors duration-300 group-hover:text-foreground tracking-tight">
-                    {item.name}
-                  </span>
-                </div>
-
-                <span
-                className="font-bold text-xl text-zeta transition-colors duration-300 group-hover:text-foreground"
-                  aria-hidden="true"
-                >
-                  {"-->"}
+    <section className="w-full py-5 bg-background overflow-hidden">
+      <div className="container mx-auto px-0">
+        <div 
+          className="relative w-full max-w-6xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div 
+            ref={scrollerRef}
+            className="flex whitespace-nowrap"
+            style={{ willChange: 'transform' }}
+          >
+            {duplicatedTechStack.map((tech, index) => (
+              <div
+                key={index}
+                className="inline-flex flex-col items-center justify-center mx-4 p-6 bg-background rounded-xl shadow-lg hover:bg-suram transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl min-w-[140px] border border-gray-200"
+              >
+                <Icon 
+                  icon={tech.icon} 
+                  className="text-4xl mb-2 text-black" 
+                />
+                <span className="text-black font-medium text-sm mt-2">
+                  {tech.name}
                 </span>
               </div>
-            </Link>
-        ))}
-      </AnimatedBackground>
+            ))}
+          </div>
+
+          {/* Gradient overlay untuk efek fade di ujung */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent z-10"></div>
+        </div>
+      </div>
     </section>
   );
 };
