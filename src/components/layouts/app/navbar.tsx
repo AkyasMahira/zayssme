@@ -9,16 +9,24 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { navigationItems } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
+import { Icon } from '@iconify/react';
 import { useReducedMotion } from "motion/react";
 import { usePathname } from "next/navigation";
 
 const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
   ssr: false,
 });
+const RESUME_PATH = "/Zayssme_Resume.pdf";
 
 const Navbar = () => {
   const prefersReducedMotion = useReducedMotion();
@@ -43,9 +51,22 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <span className="px-2 bg-foreground text-background text-xl font-bold shadow-shadow">
-          {"<--"}
-        </span>
+        <a
+          href={RESUME_PATH}
+          download="Zayssme_Resume.pdf"
+          className="px-2 bg-foreground text-background text-xl font-bold shadow-shadow flex items-center justify-center"
+        >
+          <TooltipProvider delayDuration={150}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Icon icon="line-md:downloading-loop" className="w-6 h-6" />
+              </TooltipTrigger>
+              <TooltipContent side="top" sideOffset={5}>
+                Download My CV
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </a>
       </div>
       <div className="md:hidden flex items-center font-roboto bg-suram">
         <span className="px-4 text-lg font-medium">menu</span>
@@ -106,6 +127,32 @@ const Navbar = () => {
                   </motion.div>
                 );
               })}
+              <motion.div
+                className="w-full max-w-[300px] mt-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  times: [0.6],
+                  duration: 0.5,
+                  delay: navigationItems.length * 0.12,
+                  ease: "easeOut",
+                }}
+              >
+                <Button
+                  asChild 
+                  variant="default" 
+                  size={"classic"} 
+                  className="w-full h-12 flex items-center justify-center gap-2" 
+                >
+                  <a
+                    href={RESUME_PATH}
+                    download="Zayssme_Resume.pdf"
+                  >
+                    <Icon icon="line-md:downloading-loop" className="w-5 h-5" />
+                    Download CV
+                  </a>
+                </Button>
+              </motion.div>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

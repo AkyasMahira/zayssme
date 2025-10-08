@@ -9,7 +9,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import { ongithub } from "@/constants";
 import { Badge } from "@/components/ui/badge";
-import CoffeeText from "@/components/ui/coffee-text";
+import MatchaText from "@/components/ui/matcha-text";
 
 const MoreOnGithubSection = () => {
   return (
@@ -18,14 +18,14 @@ const MoreOnGithubSection = () => {
       <p className="text-zeta text-[16px] font-medium">
         explore more projects on my github. if you are interested, you can
         contribute in any of my repositories. give a{" "}
-        <CoffeeText>star</CoffeeText> if there is a repo you like.
+        <MatchaText>star</MatchaText> if there is a repo you like.
       </p>
       <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-start md:justify-between">
         <div className="flex items-center gap-3">
           <Link
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/IRTIDEATH?tab=repositories"
+            href="https://github.com/AkyasMahira?tab=repositories"
             className="text-sm font-medium text-foreground hover:underline decoration-2"
           >
             view
