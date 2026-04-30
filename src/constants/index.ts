@@ -78,7 +78,7 @@ export const achievements: TAchievement[] = [
 export const internships: Tinternship[] = [
     {
         company: "RSUD Simpang Lima Gumul",
-        position: "Fullstack Website Developer",
+        position: "Fullstack Website Developer (Internship)",
         date: "Jul - Dec 2025",
         technologies: [
             {
