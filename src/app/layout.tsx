@@ -15,35 +15,88 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zayssme",
-  description: "Portfolio website of Akyas Mahira",
+  metadataBase: new URL("https://zayssme.my.id"),
+
+  title: {
+    default: "Zayssme",
+    template: "%s | Zayssme",
+  },
+
+  description:
+    "Portfolio website of Akyas Mahira — web developer, software engineer, and creator of personal projects.",
+
   keywords: [
-    "software engineer",
+    "Akyas Mahira",
+    "Zayssme",
     "web developer",
-    "coding",
+    "software engineer",
+    "frontend developer",
+    "fullstack developer",
+    "next.js developer",
+    "typescript developer",
+    "portfolio website",
     "programming",
     "web development",
+    "software development",
     "personal projects",
-    "portfolio",
-    "portfolio website",
-    "akyas mahira portfolio",
-    "zayssme portfolio",
-    "zayssme portfolio website",
-    "akyas mahira portfolio website",
-    "npc",
-    "akyas mahira",
-    "zayssme",
-    "osaragi",
-    "cat",
+    "Muhammad Akyas Mahira Abduh",
+    "jasa pembuatan website",
+    "kediri",
+    "kediri, jawa timur",
+    "kediri, indonesia",
   ],
+
   authors: [
     {
-      name: "Doombundel",
+      name: "Akyas Mahira",
       url: "https://github.com/AkyasMAhira",
     },
   ],
+
+  creator: "Akyas Mahira",
+
   icons: {
     icon: "/untitled.svg",
+  },
+
+  verification: {
+    google: "XRsOgHAwdi2D8vg2NvkPbl4v8fGIGvEEG6I9-g7Pduo",
+  },
+
+  other: {
+    monetag: "e0efc12e0a0889b4a96e81e7430b3ff6",
+  },
+
+  openGraph: {
+    title: "Zayssme",
+    description:
+      "Portfolio website of Akyas Mahira — web developer and software engineer.",
+    url: "https://zayssme.my.id",
+    siteName: "Zayssme",
+    locale: "en_US",
+    type: "website",
+
+    images: [
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Zayssme Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Zayssme",
+    description:
+      "Portfolio website of Akyas Mahira — web developer and software engineer.",
+    images: ["/banner.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -54,18 +107,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="XRsOgHAwdi2D8vg2NvkPbl4v8fGIGvEEG6I9-g7Pduo"
-        />
-        {/* monetization */}
-        <meta name="monetag" content="e0efc12e0a0889b4a96e81e7430b3ff6" />
-      </head>
       <body
         className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
       >
         <Wrapper>{children}</Wrapper>
+
         <Toaster
           richColors
           toastOptions={{
