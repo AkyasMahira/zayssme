@@ -37,13 +37,7 @@ export const metadata: Metadata = {
     "portfolio website",
     "programming",
     "web development",
-    "software development",
     "personal projects",
-    "Muhammad Akyas Mahira Abduh",
-    "jasa pembuatan website",
-    "kediri",
-    "kediri, jawa timur",
-    "kediri, indonesia",
   ],
 
   authors: [
@@ -61,10 +55,6 @@ export const metadata: Metadata = {
 
   verification: {
     google: "XRsOgHAwdi2D8vg2NvkPbl4v8fGIGvEEG6I9-g7Pduo",
-  },
-
-  other: {
-    monetag: "e0efc12e0a0889b4a96e81e7430b3ff6",
   },
 
   openGraph: {
