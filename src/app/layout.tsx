@@ -59,6 +59,8 @@ export default function RootLayout({
           name="google-site-verification"
           content="XRsOgHAwdi2D8vg2NvkPbl4v8fGIGvEEG6I9-g7Pduo"
         />
+        {/* monetization */}
+        <meta name="monetag" content="e0efc12e0a0889b4a96e81e7430b3ff6" />
       </head>
       <body
         className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
